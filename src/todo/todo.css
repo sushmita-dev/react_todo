@@ -1,0 +1,109 @@
+.todo {
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.todo-header{
+    color: #EA4C89;
+}
+.todo-input{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.todo-text-input {
+
+    outline: none;
+    border: 1px solid  #EA4C89;
+    border-radius: 6px;
+    min-width: 200px;
+    padding: 8px;
+}
+.todo-button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.todo-button:hover,
+.todo-button:focus {
+  background-color: #F082AC;
+}
+.empty-todo{
+    color: #EA4C89;
+    font-weight: 600;
+}
+.todo-body{
+    width: 100%;
+    box-sizing: border-box;
+    word-break: break-all;
+    padding: 12px;
+    height: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;    padding: 15px;
+
+}
+.todo-list{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    min-height: 200px;
+    max-height: 400px;
+    padding-right: 8px;
+}
+.todo-list::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+}
+.todo-list::-webkit-scrollbar-thumb{
+    background-color:  black;
+
+}
+.todo-list::-webkit-scrollbar-track{
+    background-color: #F082AC;
+}
+.todo-element{
+    background-color: #b6074a;
+    padding: 8px;
+    color: #FFFFFF;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.delete-button{
+    cursor: pointer;
+}
