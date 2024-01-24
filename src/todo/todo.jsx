@@ -15,10 +15,15 @@ function Todo() {
         if (todoText.trim() === '') {
             return;
         }
-
         setTodoList([...todolist, todoText])
         setTodoText('')
     }
+    const handleDelete = (indextodelete) =>{
+        console.log('delete',indextodelete)
+        const filteredArray  = todolist.filter((element, index) => index !== indextodelete);
+        setTodoList([ ...filteredArray])
+    }
+
     return (
         <div className='todo'>
             <div className='todo-header'>
@@ -37,8 +42,8 @@ function Todo() {
                         </span>
                         : <div className='todo-list'>
                             {
-                                todolist.map((todo) => {
-                                    return <div className='todo-element'>{todo}<img className="delete-button"width='20px' height='20px' src={bin} alt="delete icon" /> </div>
+                                todolist.map((todo , todoindex) => {
+                                    return <div className='todo-element'>{todo}<img onClick ={() =>handleDelete(todoindex)} className="delete-button"width='20px' height='20px' src={bin} alt="delete icon" /> </div>
                                 })
                             }
                         </div>
